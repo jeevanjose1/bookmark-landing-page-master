@@ -1,0 +1,179 @@
+.feature{
+    text-align: center;
+    
+    margin: 0 auto;
+
+    .heading{
+        justify-content: center;
+        align-items: center;
+        max-width: 535px;
+        flex-direction: column;
+        margin: 0 auto;
+    }
+    
+
+    &__mainheading{
+
+        
+        
+        color: $VeryDarkBlue;
+        font-size:1.75rem ;
+        margin-bottom: 20px;
+
+    }
+
+    &__detials{
+      
+        color: $GrayishBlue;
+        font-size: 15px;
+        line-height: 1.5;
+        
+        margin-bottom: 50px;
+    }
+
+
+
+    &__headings{
+
+        max-width:500px;
+        margin: 0 auto;
+        margin-bottom: 6rem;
+        flex-direction: column;
+
+        @include respond(tab){
+
+            flex-direction: row;
+            max-width:700px;
+           
+        }
+       
+    }
+    
+    &__heading
+    {
+        display: block;
+        width: 100%;
+        background: none;
+        padding: 15px 20px;
+        outline: none;
+        border-bottom: solid 1px gray;
+        border-top:none;
+        border-left: none;
+        border-right:none;
+        color: $GrayishBlue;
+        font-size: 16px;
+        position: relative;
+        padding: 1.6rem 0rem;
+        cursor: pointer;
+
+        @include respond(tab){
+
+            
+            &:not(:last-child)
+            {
+               padding-right:3rem ;
+            }
+        }
+
+        &:first-child:active{
+            border-top:solid 1px gray;
+        }
+
+        &::after
+        {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translatex(-50%) scalex(0);
+            transform-origin: left;
+            width: 150px;
+            height: 3px;
+            background-color: $SoftRed;
+            transition: all .2s;
+            
+            
+            &:last-child
+            {
+                margin-bottom: 3rem;
+            }
+        }
+       &:hover::after
+       {
+            transform:translatex(-50%)  scalex(1);
+       }
+    } 
+
+
+
+&__maindetials1{
+    flex-direction: column;
+    max-width: 700px;
+    margin: auto;
+    position: relative;
+    @include respond(tab){
+
+        flex-direction: row;
+        max-width: 100%;
+        align-items: center;
+        text-align: left;
+
+    }
+
+}
+&__img1{
+
+    width: 100%;
+    margin-bottom: 3rem;
+}
+
+    &__detialsbtn{
+        display: none;
+    }
+
+
+    &__detialsmainheading{
+        margin-bottom: 2rem;
+        color: black;
+        margin-top: 50px;
+    }
+
+    &__detials1{
+
+@include respond(tab){
+
+    padding-left: 8rem;
+}
+       
+}
+
+
+
+
+&__img{
+    position: relative;
+    width: 100%;
+   
+    &::after
+    {
+        content: "";
+        position: absolute;
+        top: 20%;
+        left: -20%;
+        width: 90%;
+        height: 80%;
+        background-color: $SoftBlue;
+        z-index: -1;
+        border-radius: 0px 200px 200px 0px;
+
+        @include respond(tab){
+            top: 20%;
+            left: -55%;
+            width: 150%;
+            height: 80%;
+           
+        }
+    }
+}
+
+}

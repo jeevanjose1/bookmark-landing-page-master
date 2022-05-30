@@ -1,0 +1,29 @@
+.flex{
+    display:flex
+}
+
+.container{
+    max-width: 1110px;
+     margin: auto;
+
+     &--px{
+
+        padding-left:2rem ;
+        padding-right:2rem ;
+
+     }
+
+     &--py{
+         padding-top: 2.5rem;
+         padding-bottom: 2.5rem;
+
+     }
+
+     &--pall{
+        padding-top: 2.5rem;
+        padding-right:2rem ;
+        padding-bottom: 2.5rem;
+        padding-left:2rem ;
+
+     }
+}

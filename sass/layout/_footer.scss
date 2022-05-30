@@ -1,0 +1,132 @@
+footer{
+    background-color: $SoftBlue;
+    height: 448px
+}
+.formcontainer{
+
+    text-align: center;
+    max-width: 445px;
+
+    &__sub{
+        color: white;
+        font-size: 12px;
+        font-weight: 400;
+        letter-spacing: 2px;
+      margin-bottom: 2rem;
+        text-transform: uppercase;
+    }
+
+    &__main{
+
+        color: white;
+        font-size: 30px;
+        font-weight: 400;
+        margin-bottom: 1rem;
+    }
+
+ .in{
+     position: relative;
+ }
+
+    .para{
+        background-color: $SoftRed;
+        color: white;
+        font-size: 12px;
+        height: 25px;
+        width: 250px;
+        position: absolute;
+        left: 50%;
+        border-radius: 0px 0px 5px 5px;
+        top:25%;
+        transform: translate(-50%, -50%);
+        z-index: 0;
+        transition: all .2s;
+       
+    }
+
+    .input{
+        width: 250px;
+        height: 48px;
+        border: none;
+        padding: 1rem;
+        outline: none;
+        border-radius: 5px;
+        position: relative;
+        transition: all .2s;
+        z-index: 1;
+
+    }
+
+    .input:invalid ~ .para{
+        top:45%;
+    }
+    .input:invalid{
+        border: solid 2px $SoftRed;
+    }
+    .input:invalid ~ .btn{
+       transform: translateY(2rem);
+    }
+
+    .btn{
+
+        width: 250px;
+        height: 48px;
+        border:none;
+        border-radius: 5px;
+        background-color: $SoftRed;
+        color: white;
+       // margin-top: 1rem;
+
+
+
+    }
+
+
+    &__footer{
+        background-color: $VeryDarkBlue;
+        nav{
+            justify-content: space-between;
+            flex-direction: column;
+            align-items: center;
+
+            @include respond(tab){
+                flex-direction: row;
+                align-items: center;
+            }
+        
+
+       .nav-list{
+        margin-bottom: 2rem;
+        li{
+            display: block;
+            text-align: center;
+            @include respond(tab){
+                display: inline-block;
+            }
+        }
+
+        &__links{
+            color: white;
+            font-size: 16px;
+            padding: 2rem;
+            &:not(:last-child){
+                margin-bottom: 2rem;
+            }
+            
+            
+        }
+
+       }
+    }
+
+    .facebook{
+        &:first-child{
+            margin-right: 1rem;
+        }
+    }
+    }
+
+}
+
+
+
